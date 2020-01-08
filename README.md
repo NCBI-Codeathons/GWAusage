@@ -51,12 +51,12 @@ The second goal is to interogate public databases to determine if newly identifi
 * Interrogate public databases to determine the significance of each SNPs in different conditions
 
 ## Input Files
-#### Phenotype
+-  Phenotype
 
-#### continuous covariates
+-  continuous covariates
 
-#### discrete covariates
+-  discrete covariates
 
-#### VCF or BAM
+-  VCF or BAM
 
 

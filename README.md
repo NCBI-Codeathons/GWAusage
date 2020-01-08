@@ -1,7 +1,7 @@
 # GWAusage
 
 
-![My image](https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/logo.png)
+![My image](https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/GWAusageLogo.png)
 
 Comprehensive package for complex trait GWAS implementing data mining
 

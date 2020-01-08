@@ -1,5 +1,5 @@
 # GWAusage
-## Comprehensive Shiny App for complex trait GWAS implementing data mining
+## Comprehensive Shiny App for complex trait GWAS implementing data mining.
 
 ![My image](https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/GWAusageLogo.png)
 

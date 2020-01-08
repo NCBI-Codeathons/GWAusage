@@ -5,7 +5,7 @@
 
 
 
-**Contributors**
+## Contributors
 
  * Sheng Zhang - Developer
  * Owen Baker - Developer

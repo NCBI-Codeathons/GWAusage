@@ -10,8 +10,8 @@
  * Sheng Zhang - Developer
  * Owen Baker - Developer
  * William Schwarzmann - Developer
- * Richard Copin - Writer
- * Brandon Blobner - Lead
+ * Richard Copin - Developer/Writer
+ * Brandon Blobner - Developer/Lead
 
 ## Table of Contents
 * [Goals](https://github.com/NCBI-Hackathons/ID-GWAS.git#intro)

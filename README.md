@@ -50,13 +50,13 @@ The second goal is to interogate public databases to determine if newly identifi
 ### Module 4: 
 * Interrogate public databases to determine the significance of each SNPs in different conditions
 
-## Pipeline
-### Phenotype
+## Input Files
+#### Phenotype
 
-### continuous covariates
+#### continuous covariates
 
-### discrete covariates
+#### discrete covariates
 
-### VCF or BAM
+#### VCF or BAM
 
 

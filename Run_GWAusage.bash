@@ -47,22 +47,23 @@ fi
 #Perform stepwise regression
 Rscript regression.R
 
-#Rename files
-rm discrete_covariates.txt
-mv disc_cov.txt discrete_covariates.txt
-rm continuous_covariates.txt
-mv cont_cov.txt continuous_covariates.txt
-
 #Calculate genetic relatedness matrix
-#gcta64 --make-grm mydata
+gcta64 --bfile mydata --autosome --make-grm --thread-num 10 --out mydata_matrix
 
 #Perform GWAS
 gcta64 --mlma --bfile mydata --grm mydata \
-       --pheno phenotypes.txt \
-       --covar discrete_covariates.txt \
-       --qcovar continuous_covariates.txt \
-       --out mydata \
-       --thread-num 10 --maf 0.01 --autosome --remove exclude.txt
+        --pheno phenotypes.txt \
+        --covar disc_cov.txt \
+        --qcovar cont_cov.txt \
+        --out mydata \
+        --thread-num 10 --maf 0.01 --autosome
 
 #Draw plots
 Rscript qqman_scripts.R
+
+#Generate clump file
+plink --bfile ../NAPS2 --clump ../*.mlma --clump-p1 1e-5 --clump-r2 0 --clump-kb 500 --out locus --clump-field p --clump-p2 1
+
+#Get snips from clump file
+awk '{print $3}' locus.clumped > index_snps.txt
+

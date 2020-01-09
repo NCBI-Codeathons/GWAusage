@@ -31,6 +31,10 @@ The first goal is to generate an automated pipline using tabular vcf and/or bam 
 
 The second goal is to interogate public databases to determine if newly identified SNPs have also been associated to other clinical conditions.
 
+## Introduction
+
+The genome-wide association study (GWAS) has become a staple of geneticists worldwide. While GWASs are commonly conducted, the process is often cumbersome, involving multiple programs for data formatting, quality control, and analysis, and often these programs are initialized one at a time by the researcher conducting the analysis. This leads to time lost to processes that can be automated. Here, we introduce GWAusage, an analysis tool designed to automate and streamline the GWAS. With GWAusage, a researcher need only provide genotype or sequencing files, in variant call format (vcf) or Plink format, and formatted phenotype and covariate files in order to conduct a GWAS, generate plots, and querying databases for additional information on single nucleotide polymorphisms (SNPs) of interest. GWAusage automates data formatting, step-wise regression analysis, and generating a genetic relatedness matrix. Using this analysis tool, researchers can easily conduct GWASs and gain valuable time to dedicate to other areas of research.
+
 ## Pipeline
 ### Module 1: Input / Filtering using Plink
 * Formatting the genotyping data (from vcf to plink format)

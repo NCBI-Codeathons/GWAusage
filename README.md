@@ -63,4 +63,24 @@ The second goal is to interogate public databases to determine if newly identifi
 
 -  VCF or BAM
 
+## Dependencies
+1. plink v1.9 (https://www.cog-genomics.org/plink/1.9/)
+2. gtca v1.93.0
+3. R v3.5 
+### R packages
+  * shinydashboard )
+  * shiny
+  * dplyr
+  * leaflet
+  * dashboardthemes
+  * data.table 
+  * RColorBrewer
+  * ggplot2
+  * plotly
+  * shinyWidgets
+  * shinycssloaders
+  * MASS
+  * qqman
+  * haploR
+
 

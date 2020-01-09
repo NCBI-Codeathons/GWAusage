@@ -72,7 +72,7 @@ Using the qqman R package (ver 0.1.4), manhattan plots are created to visualize 
 
 ## Dependencies
 1. plink v1.9 (https://www.cog-genomics.org/plink/1.9/)
-2. gtca v1.93.0
+2. gtca v1.93.0 (https://cnsgenomics.com/software/gcta/#Download)
 3. R v3.5 
 ### R packages
   * shinydashboard )

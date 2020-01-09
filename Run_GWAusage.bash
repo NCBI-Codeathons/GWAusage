@@ -59,14 +59,14 @@ fi
 Rscript regression.R
 
 #Calculate genetic relatedness matrix
-gcta64 --bfile temp/mydata --autosome --make-grm --thread-num 10 --out temp/mydata
+gcta64 --bfile ${OUTPUT_DIR}/mydata --autosome --make-grm --thread-num 10 --out ${OUTPUT_DIR}/mydata
 
 #Perform GWAS
-gcta64 --mlma --bfile temp/mydata --grm temp/mydata \
+gcta64 --mlma --bfile ${OUTPUT_DIR}/mydata --grm ${OUTPUT_DIR}/mydata \
         --pheno phenotypes.txt \
         --covar disc_cov.txt \
         --qcovar cont_cov.txt \
-        --out mydata \
+        --out ${OUTPUT_DIR}/mydata \
         --thread-num 10 --maf 0.01 --autosome
 
 #Draw plots

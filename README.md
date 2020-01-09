@@ -65,7 +65,7 @@ GWAusage accepts inputs to the pipeline of genotype data in variant call format 
 
 -  discrete covariates
 
--  VCF or BAM
+-  VCF or Plink format genotyping files
 
 ## Dependencies
 1. plink v1.9 (https://www.cog-genomics.org/plink/1.9/)

@@ -1,28 +1,39 @@
 #!/bin/bash
 
-module load R/3.6.0-mkl
-PATH=/pylon5/brz3a1p/wis29/gcta_1.93.0beta/:$PATH
-
-# Dependancies
-#	- PLINK 1.9
-
-#Format genotype data
-
-# Check input parameters
-if [ -z "$1" ]; then
-	echo "Usage: input_filtering.sh <genotype_data> <maf>"
-	exit 0
-else
-	# genotype data
-	GENOTYPE_DATA=$1
-fi
-
+#module load R/3.6.0-mkl
+#PATH=/pylon5/brz3a1p/wis29/gcta_1.93.0beta/:$PATH
+​
+# fixed path and input filename
+INPUT_DIR=../../input
+OUTPUT_DIR=../../temp
+GENO_BASENAME="genotype_data"
 # minimum allele frequency
-if [ -z "$2" ]; then
-	echo "MAF is set to 0.01 by default";
-	MAF=0.01
-else 
-	MAF=$2
+MAF=0.01 
+​
+if [ -f "${INPUT_DIR}/${GENO_BASENAME}.vcf" ]; then
+    vcf_ifile=${INPUT_DIR}/${GENO_BASENAME}.vcf
+fi
+if [ -f "${INPUT_DIR}/${GENO_BASENAME}.vcf.gz" ]; then
+	vcf_ifile=${INPUT_DIR}/${GENO_BASENAME}.vcf.gz
+fi
+if [ ! -z "$vcf_ifile" ]; then
+	echo "Genotype data is in the format of vcf. Convert it to plink map"
+	plink --noweb --vcf $vcf_ifile --recode --out ${OUTPUT_DIR}/${GENO_BASENAME}
+fi
+​
+if [ -f "${INPUT_DIR}/${GENO_BASENAME}.map" ]; then
+	map_ifile=${INPUT_DIR}/${GENO_BASENAME}
+elif [ -f "${OUTPUT_DIR}/${GENO_BASENAME}.map" ]; then
+	map_ifile=${OUTPUT_DIR}/${GENO_BASENAME}
+fi
+if [ ! -z "$map_ifile" ]; then
+	echo "Genotype data is in the format of map. Run plink"
+	plink --noweb --file $map_ifile --maf $MAF --autosome --make-bed --out ${OUTPUT_DIR}/${GENO_BASENAME}
+fi
+​
+if [ -f "${INPUT_DIR}/${GENO_BASENAME}.bed" ]; then
+	echo "Genotype data is in the format of bed. Run plink"
+    plink --noweb --bfile ${INPUT_DIR}/${GENO_BASENAME} --maf $MAF --autosome --make-bed --out ${OUTPUT_DIR}/${GENO_BASENAME}
 fi
 
 # Check the format of genotype data
@@ -48,10 +59,10 @@ fi
 Rscript regression.R
 
 #Calculate genetic relatedness matrix
-gcta64 --bfile mydata --autosome --make-grm --thread-num 10 --out mydata_matrix
+gcta64 --bfile temp/mydata --autosome --make-grm --thread-num 10 --out temp/mydata
 
 #Perform GWAS
-gcta64 --mlma --bfile mydata --grm mydata \
+gcta64 --mlma --bfile temp/mydata --grm temp/mydata \
         --pheno phenotypes.txt \
         --covar disc_cov.txt \
         --qcovar cont_cov.txt \

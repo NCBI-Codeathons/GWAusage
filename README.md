@@ -39,6 +39,9 @@ The second goal is to interogate public databases to determine if newly identifi
 
 GWAusage accepts inputs to the pipeline of genotype data in variant call format (VCF) or Plink format (BED, BIM, and FAM), as well as phenotype data and covariate data.  Minimum allele frequency is set by the user or a default of 1% (0.01).  The genotype data is filtered through Plink (ver. 1.9) with the allelic frequency applied.  The phenotype and covariate data are then merged in R (ver. 3.5).  Stepwise regression is performed with the MASS R package (ver 7.3) in forwards and backwards directionality.  Significant covariates are preserved and exported. A genetic relatedness matrix is calculated on the genotyping data via GCTA (ver 1.93).  The matrix is then filtered to find individuals in the population above the cutoff (0.05 default).
 
+
+Using the qqman R package (ver 0.1.4), manhattan plots are created to visualize SNPs of interest along the genome. A suggestive line (-log10(1e-5)) and genome-wide significance line (-log10(5e-8)) are displated on the graph. P values from each SNP from smallest to larges are plotted on a QQ plot to visualize the deviation of values that are expected under the null hypothesis.
+
 ## Pipeline
 ### Module 1: Input / Filtering using Plink
 * Formatting the genotyping data (from vcf to plink format)

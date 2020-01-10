@@ -6,6 +6,12 @@
 ### [Download GWAusage.zip!](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip)
 
 
+h1 { 
+    text-align: center; 
+    background-color: green; 
+}
+<h1>https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip</h1>
+
 ## Contributors
 
  * Sheng Zhang - Developer

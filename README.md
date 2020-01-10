@@ -39,6 +39,11 @@ The second goal is to interogate public databases to determine if newly identifi
 
 ## Instructions for Use
 ### Installation
+A Dockerized image of the GWAusage pipeline Shiny app can be cloned from the repository and run locally. Input files should be placed in the input folder. All required programs are contained within the image.  Docker 2.0 or higher is required. Once the image is downloaded, it can be run from the same directory with 
+`docker run --rm -p 3838:3838 GWAusage`
+
+Alternatively, the GWAusage pipeline can be run as a Shiny app outside of Docker.  The entire repository can be cloned locally to run the pipeline. The software tools Plink, GCTA, and R, as well as the R packages MASS, qqman, haploR, and their dependencies, are required to run the pipeline.
+
 ### User provided inputs
 GWAusage requires a genotyping data file and a phenotype file. Covariates must be separated into a file of discrete covariates and a file of continuous covariates. See [Inputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#inputs) for additional information on the format of these files.
 ### Running GWAusage

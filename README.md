@@ -16,13 +16,14 @@
 
 ## Table of Contents
 * [Goals](https://github.com/NCBI-Codeathons/ID-GWAS.git#Goals)
-* [Instructions](https://github.com/NCBI-Codeathons/ID-GWAS.git#Instructions)
+* [Instructions](https://github.com/NCBI-Codeathons/ID-GWAS.git#HowTo)
 * [WorkFlow](https://github.com/NCBI-Codeathons/ID-GWAS.git#WorkFlow)
 * [Methods](https://github.com/NCBI-Codeathons/ID-GWAS.git#Methods)
-* [Pipeline](https://github.com/NCBI-Codeathons/ID-GWAS.git#quickstart)
+* [Pipeline](https://github.com/NCBI-Codeathons/ID-GWAS.git#Pipeline)
 * [Help](https://github.com/NCBI-Codeathons/ID-GWAS.git#help)
 * [Inputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#inputs)
 * [Outputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#outputs)
+* [Dependencies](https://github.com/NCBI-Codeathons/ID-GWAS.git#Dependencies)
 
 
 ## Introduction
@@ -40,7 +41,7 @@ The first goal is to generate an automated pipline using tabular vcf and/or bam 
 The second goal is to interogate public databases to determine if newly identified SNPs have also been associated to other clinical conditions.
 
 
-## Instructions
+## HowTo
 ### Installation
 A Dockerized image of the GWAusage pipeline Shiny app can be cloned from the repository and run locally. Input files should be placed in the input folder. All required programs are contained within the image.  Docker 2.0 or higher is required. Once the image is downloaded, it can be run from the same directory with 
 `docker run --rm -p 3838:3838 GWAusage`
@@ -88,6 +89,14 @@ Using the qqman R package (ver 0.1.4), manhattan plots are created to visualize 
 -  Discrete covariates - Contains at least three columns: FID, IID, then an additional column for each discrete covariate. One subject per row. No header.
 
 -  VCF or Plink format (bim, bed, and fam or map and ped) genotyping files.
+
+## Outputs
+### Figures
+* Manhattan Plot
+* Q-Q Plot
+
+### Tables
+* HaploReg
 
 ## Dependencies
 1. plink v1.9 (https://www.cog-genomics.org/plink/1.9/)

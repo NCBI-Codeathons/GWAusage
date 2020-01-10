@@ -2,7 +2,7 @@
 ## Comprehensive Shiny App for complex trait GWAS implementing data mining.
 
 ![My image](https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/GWAusageLogo.png)
-
+[Click here to download](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip)
 
 
 ## Contributors

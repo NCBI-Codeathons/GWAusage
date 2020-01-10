@@ -3,7 +3,7 @@
 
 ![My image](https://github.com/NCBI-Codeathons/GWAusage/blob/master/GWAusageLogo.png)
 
-### [Download GWAusage.zip!](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip)
+### [Download GWAusage.zip!](https://github.com/NCBI-Codeathons/GWAusage/raw/master/GWAusage.zip)
 
 
 
@@ -18,15 +18,15 @@
  * Brandon Blobner - Developer/Lead
 
 ## Table of Contents
-* [Goals](https://github.com/NCBI-Codeathons/ID-GWAS.git#Goals)
-* [HowTo](https://github.com/NCBI-Codeathons/ID-GWAS.git#HowTo)
-* [WorkFlow](https://github.com/NCBI-Codeathons/ID-GWAS.git#WorkFlow)
-* [Methods](https://github.com/NCBI-Codeathons/ID-GWAS.git#Methods)
-* [Pipeline](https://github.com/NCBI-Codeathons/ID-GWAS.git#Pipeline)
-* [Help](https://github.com/NCBI-Codeathons/ID-GWAS.git#help)
-* [Inputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#inputs)
-* [Outputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#outputs)
-* [Dependencies](https://github.com/NCBI-Codeathons/ID-GWAS.git#Dependencies)
+* [Goals](https://github.com/NCBI-Codeathons/GWAusage.git#Goals)
+* [HowTo](https://github.com/NCBI-Codeathons/GWAusage.git#HowTo)
+* [WorkFlow](https://github.com/NCBI-Codeathons/GWAusage.git#WorkFlow)
+* [Methods](https://github.com/NCBI-Codeathons/GWAusage.git#Methods)
+* [Pipeline](https://github.com/NCBI-Codeathons/GWAusage.git#Pipeline)
+* [Help](https://github.com/NCBI-Codeathons/GWAusage.git#help)
+* [Inputs](https://github.com/NCBI-Codeathons/GWAusage.git#inputs)
+* [Outputs](https://github.com/NCBI-Codeathons/GWAusage.git#outputs)
+* [Dependencies](https://github.com/NCBI-Codeathons/GWAusage.git#Dependencies)
 
 
 ## Introduction
@@ -49,14 +49,14 @@ The second goal is to interogate public databases to determine if newly identifi
 A Dockerized image of the GWAusage pipeline Shiny app can be cloned from the repository and run locally. Input files should be placed in the input folder. All required programs are contained within the image.  Docker 2.0 or higher is required. Once the image is downloaded, it can be run from the same directory with 
 `docker run --rm -p 3838:3838 GWAusage`
 
-Alternatively, the GWAusage pipeline can be run as a Shiny app outside of Docker. The app and associated scripts and folders can be downloaded from the repository as a .zip file [here](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip), uncompressed, and then launched via the .Rproj file in RStudio. R v3.5 and the R packages MASS, qqman, manhattanly, haploR, and their dependencies must be installed prior to launching.  The dependent tools plink v1.9 and gtca v1.93.0 are included in the compressed app file.
+Alternatively, the GWAusage pipeline can be run as a Shiny app outside of Docker. The app and associated scripts and folders can be downloaded from the repository as a .zip file [here](https://github.com/NCBI-Codeathons/GWAusage/raw/master/GWAusage.zip), uncompressed, and then launched via the .Rproj file in RStudio. R v3.5 and the R packages MASS, qqman, manhattanly, haploR, and their dependencies must be installed prior to launching.  The dependent tools plink v1.9 and gtca v1.93.0 are included in the compressed app file.
 
 ### User provided inputs
-GWAusage requires a genotyping data file and a phenotype file. Covariates must be separated into a file of discrete covariates and a file of continuous covariates. See [Inputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#inputs) for additional information on the format of these files.
+GWAusage requires a genotyping data file and a phenotype file. Covariates must be separated into a file of discrete covariates and a file of continuous covariates. See [Inputs](https://github.com/NCBI-Codeathons/GWAusage.git#inputs) for additional information on the format of these files.
 ### Running GWAusage
 
 ## Workflow
-<img src="https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/Workflow_visualization.png" alt="drawing" width="500"/>
+<img src="https://github.com/NCBI-Codeathons/GWAusage/blob/master/Workflow_visualization.png" alt="drawing" width="500"/>
 
 ## Methods
 
@@ -85,11 +85,11 @@ Using the qqman R package (ver 0.1.4), manhattan plots are created to visualize 
 * Interrogate public databases to determine the significance of each SNPs in different conditions
 
 ## Inputs
--  Phenotype file - Containing three columns: FID, IID, and phenotype. One subject per row. No header. [Example phenotype file.](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/phenotype_file_example.txt)
+-  Phenotype file - Containing three columns: FID, IID, and phenotype. One subject per row. No header. [Example phenotype file.](https://github.com/NCBI-Codeathons/GWAusage/raw/master/phenotype_file_example.txt)
 
--  Continuous covariate file - Contains at least three columns: FID, IID, then an additional column for each continuous covariate. One subject per row. No header. [Example continuous covariate file.](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/continuous_covariate_file_example.txt)
+-  Continuous covariate file - Contains at least three columns: FID, IID, then an additional column for each continuous covariate. One subject per row. No header. [Example continuous covariate file.](https://github.com/NCBI-Codeathons/GWAusage/raw/master/continuous_covariate_file_example.txt)
 
--  Discrete covariates - Contains at least three columns: FID, IID, then an additional column for each discrete covariate. One subject per row. No header. [Example discrete covariate file.](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/discrete_covariate_file_example.txt)
+-  Discrete covariates - Contains at least three columns: FID, IID, then an additional column for each discrete covariate. One subject per row. No header. [Example discrete covariate file.](https://github.com/NCBI-Codeathons/GWAusage/raw/master/discrete_covariate_file_example.txt)
 
 -  VCF or Plink format (bim, bed, and fam or map and ped) genotyping files.
 

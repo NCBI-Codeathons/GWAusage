@@ -117,5 +117,6 @@ Using the qqman R package (ver 0.1.4), manhattan plots are created to visualize 
   * MASS
   * qqman
   * haploR
+  * manhattanly
 
 

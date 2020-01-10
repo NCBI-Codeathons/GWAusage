@@ -14,8 +14,10 @@
  * Brandon Blobner - Developer/Lead
 
 ## Table of Contents
-* [Goals](https://github.com/NCBI-Codeathons/ID-GWAS.git#intro)
-* [WorkFlow](https://github.com/NCBI-Codeathons/ID-GWAS.git#workFlow)
+* [Goals](https://github.com/NCBI-Codeathons/ID-GWAS.git#Goals)
+* [Instructions](https://github.com/NCBI-Codeathons/ID-GWAS.git#Instructions)
+* [WorkFlow](https://github.com/NCBI-Codeathons/ID-GWAS.git#WorkFlow)
+* [Methods](https://github.com/NCBI-Codeathons/ID-GWAS.git#Methods)
 * [Pipeline](https://github.com/NCBI-Codeathons/ID-GWAS.git#quickstart)
 * [Help](https://github.com/NCBI-Codeathons/ID-GWAS.git#help)
 * [Inputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#inputs)
@@ -37,7 +39,7 @@ The first goal is to generate an automated pipline using tabular vcf and/or bam 
 The second goal is to interogate public databases to determine if newly identified SNPs have also been associated to other clinical conditions.
 
 
-## Instructions for Use
+## Instructions
 ### Installation
 A Dockerized image of the GWAusage pipeline Shiny app can be cloned from the repository and run locally. Input files should be placed in the input folder. All required programs are contained within the image.  Docker 2.0 or higher is required. Once the image is downloaded, it can be run from the same directory with 
 `docker run --rm -p 3838:3838 GWAusage`

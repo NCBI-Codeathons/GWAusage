@@ -6,11 +6,14 @@
 ### [Download GWAusage.zip!](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip)
 
 
-h1 { 
+<h1><span>https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip</span></h1>
+h1 {
     text-align: center; 
+}
+h1 span { 
     background-color: green; 
 }
-<h1>https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip</h1>
+
 
 ## Contributors
 

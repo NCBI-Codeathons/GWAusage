@@ -79,7 +79,7 @@ Using the qqman R package (ver 0.1.4), manhattan plots are created to visualize 
 2. gtca v1.93.0 (https://cnsgenomics.com/software/gcta/#Download)
 3. R v3.5 
 ### R packages
-  * shinydashboard )
+  * shinydashboard
   * shiny
   * dplyr
   * leaflet

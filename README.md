@@ -71,7 +71,7 @@ Using the qqman R package (ver 0.1.4), manhattan plots are created to visualize 
 ### Module 4: 
 * Interrogate public databases to determine the significance of each SNPs in different conditions
 
-## Input Files
+## Inputs
 -  Phenotype file - Containing three columns: FID, IID, and phenotype. One subject per row. No header.
 
 -  Continuous covariate file - Contains at least three columns: FID, IID, then an additional column for each continuous covariate. One subject per row. No header.

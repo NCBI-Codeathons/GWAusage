@@ -15,11 +15,12 @@
 
 ## Table of Contents
 * [Goals](https://github.com/NCBI-Codeathons/ID-GWAS.git#intro)
+* [WorkFlow](https://github.com/NCBI-Codeathons/ID-GWAS.git#workFlow)
 * [Pipeline](https://github.com/NCBI-Codeathons/ID-GWAS.git#quickstart)
 * [Help](https://github.com/NCBI-Codeathons/ID-GWAS.git#help)
 * [Inputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#inputs)
 * [Outputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#outputs)
-* [WorkFlow](https://github.com/NCBI-Codeathons/ID-GWAS.git#workFlow)
+
 
 ## Introduction
 

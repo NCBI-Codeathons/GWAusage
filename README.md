@@ -36,14 +36,15 @@ The first goal is to generate an automated pipline using tabular vcf and/or bam 
 
 The second goal is to interogate public databases to determine if newly identified SNPs have also been associated to other clinical conditions.
 
-## Workflow
-![My image](https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/Workflow_visualization.png)
 
 ## Instructions for Use
 ### Installation
 ### User provided inputs
 GWAusage requires a genotyping data file and a phenotype file. Covariates must be separated into a file of discrete covariates and a file of continuous covariates. See [Inputs](https://github.com/NCBI-Codeathons/ID-GWAS.git#inputs) for additional information on the format of these files.
 ### Running GWAusage
+
+## Workflow
+![My image](https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/Workflow_visualization.png)
 
 ## Methods
 

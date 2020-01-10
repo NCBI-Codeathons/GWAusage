@@ -52,7 +52,7 @@ GWAusage requires a genotyping data file and a phenotype file. Covariates must b
 ### Running GWAusage
 
 ## Workflow
-<img src="https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/Workflow_visualization.png" alt="drawing" width="200"/>
+<img src="https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/Workflow_visualization.png" alt="drawing" width="600"/>
 
 ## Methods
 

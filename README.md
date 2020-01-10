@@ -66,13 +66,13 @@ Using the qqman R package (ver 0.1.4), manhattan plots are created to visualize 
 * Interrogate public databases to determine the significance of each SNPs in different conditions
 
 ## Input Files
--  Phenotype
+-  Phenotype file - Containing three columns: FID, IID, and phenotype. One subject per row. No header.
 
--  continuous covariates
+-  Continuous covariate file - Contains at least three columns: FID, IID, then an additional column for each continuous covariate. One subject per row. No header.
 
--  discrete covariates
+-  Discrete covariates - Contains at least three columns: FID, IID, then an additional column for each discrete covariate. One subject per row. No header.
 
--  VCF or Plink format genotyping files
+-  VCF or Plink format (bim, bed, and fam or map and ped) genotyping files.
 
 ## Dependencies
 1. plink v1.9 (https://www.cog-genomics.org/plink/1.9/)

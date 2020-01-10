@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OUTPUT_DIR=../../../temp
+OUTPUT_DIR=../../temp
 GENO_BASENAME="genotype_data"
 
 #Generate clump file

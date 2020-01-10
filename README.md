@@ -3,7 +3,7 @@
 
 ![My image](https://github.com/NCBI-Codeathons/ID-GWAS/blob/master/GWAusageLogo.png)
 
-### [Download GWAuSage.zip file!](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip)
+### [Download the GWAusage.zip file!](https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip)
 
 
 ## Contributors

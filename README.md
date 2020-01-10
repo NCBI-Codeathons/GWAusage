@@ -7,10 +7,12 @@
 
 
 
-<body style="background-color:green;">
-      <h1>https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip</h1>
-      <p>https://github.com/NCBI-Codeathons/ID-GWAS/raw/master/GWAusage.zip</p>
-   </body>
+<body style="background-color:powderblue;">
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
 
 
 ## Contributors
